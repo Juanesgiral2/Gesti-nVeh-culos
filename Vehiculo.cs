@@ -12,6 +12,7 @@ namespace GestionVehiculos
         public string Marca { get; protected set; }
         public string Modelo { get; protected set; }
         public string Año { get; protected set; }
+        public string Estado { get; protected set; }
         public virtual int PrecioDia { get; protected set; }
 
         //Constructor
@@ -20,6 +21,7 @@ namespace GestionVehiculos
             Marca = marca;
             Modelo = modelo;
             Año = año;
+            Estado = "Para alquilar";
         }
 
         //Método
@@ -35,7 +37,7 @@ namespace GestionVehiculos
         //Atributo
         public string TipoManillar { get; private set; }
         public string Cilindraje { get; private set; }
-        public override int PrecioDia { get { return 50000; } }
+        public override int PrecioDia { get { return 25000; } }
 
         //Constructor
         public Moto(string marca, string modelo, string año, string manillar, string cilindraje) : base (marca,modelo,año)
