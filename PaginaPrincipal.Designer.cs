@@ -34,12 +34,14 @@
             this.alquilerCarrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.salirDeLaAplicaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +51,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alquilerMotosToolStripMenuItem,
-            this.alquilerCarrosToolStripMenuItem});
+            this.alquilerCarrosToolStripMenuItem,
+            this.salirDeLaAplicaciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(920, 28);
@@ -89,14 +92,27 @@
             this.Modelo,
             this.Año,
             this.PrecioDia,
+            this.Placa,
             this.Estado});
-            this.dataGridView1.Location = new System.Drawing.Point(96, 187);
+            this.dataGridView1.Location = new System.Drawing.Point(40, 176);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(679, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(804, 290);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(107, 512);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(654, 162);
+            this.label2.TabIndex = 3;
+            this.label2.Text = resources.GetString("label2.Text");
             // 
             // Marca
             // 
@@ -130,6 +146,14 @@
             this.PrecioDia.ReadOnly = true;
             this.PrecioDia.Width = 125;
             // 
+            // Placa
+            // 
+            this.Placa.HeaderText = "Placa";
+            this.Placa.MinimumWidth = 6;
+            this.Placa.Name = "Placa";
+            this.Placa.ReadOnly = true;
+            this.Placa.Width = 125;
+            // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
@@ -138,14 +162,11 @@
             this.Estado.ReadOnly = true;
             this.Estado.Width = 125;
             // 
-            // richTextBox1
+            // salirDeLaAplicaciónToolStripMenuItem
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(153, 511);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(552, 123);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.salirDeLaAplicaciónToolStripMenuItem.Name = "salirDeLaAplicaciónToolStripMenuItem";
+            this.salirDeLaAplicaciónToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
+            this.salirDeLaAplicaciónToolStripMenuItem.Text = "Salir de la aplicación";
             // 
             // PaginaPrincipal
             // 
@@ -153,7 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(920, 714);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -176,11 +197,13 @@
         private System.Windows.Forms.ToolStripMenuItem alquilerCarrosToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Año;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioDia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Placa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem salirDeLaAplicaciónToolStripMenuItem;
     }
 }

@@ -22,14 +22,14 @@ namespace GestionVehiculos
 
         public static List<Vehiculo> Vehiculos { get; private set; } = new List<Vehiculo>
         {
-                new Moto("Yamaha", "CB", "2024", "Mediano", "160cc"),
-                new Moto("KTM", "Duke 390", "2023", "Naked", "390cc"),
-                new Moto("BMW", "G 310 R", "2024", "Naked", "310cc"),
-                new Moto("Harley-Davidson", "Sportster", "2023", "Cruiser", "1200cc"),
-                new Carro("Mazda", "CX-5", "2023", "5", "Gasolina"),
-                new Carro("Volkswagen", "Golf", "2022", "4", "Diesel"),
-                new Carro("Nissan", "Altima", "2024", "4", "Híbrido"),
-                new Carro("BMW", "Series 3", "2023", "4", "Eléctrico")
+                new Moto("Yamaha", "CB", "2024","ISD85B","Mediano", "160cc"),
+                new Moto("KTM", "Duke 390", "2023", "XTR94P", "Naked", "390cc"),
+                new Moto("BMW", "G 310 R", "2024","BQZ71M", "Naked", "310cc"),
+                new Moto("Harley-Davidson", "Sportster", "2023", "LVD32X", "Cruiser", "1200cc"),
+                new Carro("Mazda", "CX-5", "2023", "PFK86T", "5", "Gasolina"),
+                new Carro("Volkswagen", "Golf", "2022", "MYS47C", "4", "Diesel"),
+                new Carro("Nissan", "Altima", "2024", "TND29J", "4", "Híbrido"), 
+                new Carro("BMW", "Series 3", "2023", "WXR58V", "4", "Eléctrico")
         };
         
     }

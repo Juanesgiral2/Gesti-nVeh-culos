@@ -15,12 +15,15 @@ namespace GestionVehiculos
         public string Estado { get; protected set; }
         public virtual int PrecioDia { get; protected set; }
 
+        public string Placa { get; protected set; }
+
         //Constructor
-        public Vehiculo(string marca, string modelo, string año) 
+        public Vehiculo(string marca, string modelo, string año, string placa) 
         {
             Marca = marca;
             Modelo = modelo;
             Año = año;
+            Placa = placa;
             Estado = "Para alquilar";
         }
 
@@ -40,7 +43,7 @@ namespace GestionVehiculos
         public override int PrecioDia { get { return 25000; } }
 
         //Constructor
-        public Moto(string marca, string modelo, string año, string manillar, string cilindraje) : base (marca,modelo,año)
+        public Moto(string marca, string modelo, string año, string placa,string manillar, string cilindraje) : base (marca,modelo,año,placa)
         {
             TipoManillar = manillar;
             Cilindraje = cilindraje;
@@ -55,7 +58,7 @@ namespace GestionVehiculos
         public override int PrecioDia { get { return 50000; } }
 
         //Constructor
-        public Carro(string marca, string modelo, string año, string puertas, string combustible):base(marca,modelo,año) 
+        public Carro(string marca, string modelo, string año, string placa,string puertas, string combustible):base(marca,modelo,año, placa) 
         {
             NumeroPuertas = puertas;
             TipoCombustible = combustible;

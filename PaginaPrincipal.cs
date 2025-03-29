@@ -28,12 +28,12 @@ namespace GestionVehiculos
             //Código para asignar los valores de los objetos de la lista Vehiculos en el datagridview
             foreach (Vehiculo vehiculo in Empresa.Vehiculos) 
             {
-                dataGridView1.Rows.Clear();
                 int index = dataGridView1.Rows.Add();
                 dataGridView1.Rows[index].Cells["Marca"].Value = vehiculo.Marca;
                 dataGridView1.Rows[index].Cells["Modelo"].Value = vehiculo.Modelo;
                 dataGridView1.Rows[index].Cells["Año"].Value = vehiculo.Año;
                 dataGridView1.Rows[index].Cells["PrecioDia"].Value = vehiculo.PrecioDia;
+                dataGridView1.Rows[index].Cells["Placa"].Value = vehiculo.Placa;
                 dataGridView1.Rows[index].Cells["Estado"].Value = vehiculo.Estado;
                 
             }
@@ -52,7 +52,9 @@ namespace GestionVehiculos
 
         private void alquilerMotosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AlquilerMotos motos = new AlquilerMotos();
+            motos.Show();
+            this.Hide();
         }
 
         private void alquilerCarrosToolStripMenuItem_Click(object sender, EventArgs e)
