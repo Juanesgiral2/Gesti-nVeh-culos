@@ -15,6 +15,39 @@ namespace GestionVehiculos
         public AlquilerMotos()
         {
             InitializeComponent();
+            List<string> Placas = new List<string>();
+            foreach (var vehiculo in Empresa.Vehiculos) {
+                if (vehiculo is Moto) 
+                {
+                    Placas.Add(vehiculo.Placa);
+                }
+            }
+            CbPlaca.Text = "";
+            CbPlaca.DataSource = Placas;
+        }
+
+        private void menúPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PaginaPrincipal principal = new PaginaPrincipal();
+            principal.Show();
+            this.Hide();
+        }
+
+        private void AlquilerMotos_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void CbPlaca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var encontrar = Empresa.Vehiculos.FirstOrDefault(x => x.Placa == CbPlaca.Text);
+
+            if (encontrar != null)
+            {
+                TxtMarca.Text = encontrar.Marca;
+                TxtModelo.Text = encontrar.Modelo;
+            }
+
+
         }
     }
 }

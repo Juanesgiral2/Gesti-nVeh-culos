@@ -37,11 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtMarca = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtModelo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CbPlaca = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -143,11 +143,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.TxtMarca);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.TxtModelo);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.CbPlaca);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(38, 302);
@@ -157,15 +157,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información de la moto a aquilar";
             // 
-            // textBox5
+            // TxtMarca
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(473, 108);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(203, 30);
-            this.textBox5.TabIndex = 12;
+            this.TxtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtMarca.Enabled = false;
+            this.TxtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMarca.Location = new System.Drawing.Point(473, 108);
+            this.TxtMarca.Name = "TxtMarca";
+            this.TxtMarca.Size = new System.Drawing.Size(203, 30);
+            this.TxtMarca.TabIndex = 12;
             // 
             // label7
             // 
@@ -177,15 +177,15 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Marca";
             // 
-            // textBox4
+            // TxtModelo
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(255, 108);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 30);
-            this.textBox4.TabIndex = 9;
+            this.TxtModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtModelo.Enabled = false;
+            this.TxtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtModelo.Location = new System.Drawing.Point(255, 108);
+            this.TxtModelo.Name = "TxtModelo";
+            this.TxtModelo.Size = new System.Drawing.Size(174, 30);
+            this.TxtModelo.TabIndex = 9;
             // 
             // label6
             // 
@@ -197,13 +197,15 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Modelo";
             // 
-            // comboBox1
+            // CbPlaca
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(34, 105);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 33);
-            this.comboBox1.TabIndex = 10;
+            this.CbPlaca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbPlaca.FormattingEnabled = true;
+            this.CbPlaca.Location = new System.Drawing.Point(34, 105);
+            this.CbPlaca.Name = "CbPlaca";
+            this.CbPlaca.Size = new System.Drawing.Size(174, 33);
+            this.CbPlaca.TabIndex = 10;
+            this.CbPlaca.SelectedIndexChanged += new System.EventHandler(this.CbPlaca_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -275,7 +277,7 @@
             this.menúPrincipalToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -284,6 +286,7 @@
             this.menúPrincipalToolStripMenuItem.Name = "menúPrincipalToolStripMenuItem";
             this.menúPrincipalToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.menúPrincipalToolStripMenuItem.Text = "Menú principal";
+            this.menúPrincipalToolStripMenuItem.Click += new System.EventHandler(this.menúPrincipalToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -311,6 +314,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AlquilerMotos";
             this.Text = "AlquilerMotos";
+            this.Load += new System.EventHandler(this.AlquilerMotos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -335,11 +339,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtMarca;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtModelo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CbPlaca;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox7;

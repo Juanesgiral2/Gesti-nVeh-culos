@@ -18,6 +18,7 @@ namespace GestionVehiculos
         public string Placa { get; protected set; }
 
         //Constructor
+        public Vehiculo() { }
         public Vehiculo(string marca, string modelo, string año, string placa) 
         {
             Marca = marca;
@@ -43,6 +44,7 @@ namespace GestionVehiculos
         public override int PrecioDia { get { return 25000; } }
 
         //Constructor
+        public Moto() { }
         public Moto(string marca, string modelo, string año, string placa,string manillar, string cilindraje) : base (marca,modelo,año,placa)
         {
             TipoManillar = manillar;
