@@ -29,7 +29,7 @@ namespace GestionVehiculos
                 new Carro("Mazda", "CX-5", "2023", "PFK86T", "5", "Gasolina"),
                 new Carro("Volkswagen", "Golf", "2022", "MYS47C", "4", "Diesel"),
                 new Carro("Nissan", "Altima", "2024", "TND29J", "4", "Híbrido"), 
-                new Carro("BMW", "Series 3", "2023", "WXR58V", "4", "Eléctrico")
+                new Carro("BMW", "Series 3", "2025", "WYM89G", "4", "Eléctrico")
         };
         
     }
