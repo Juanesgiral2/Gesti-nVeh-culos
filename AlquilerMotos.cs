@@ -46,8 +46,11 @@ namespace GestionVehiculos
                 TxtMarca.Text = encontrar.Marca;
                 TxtModelo.Text = encontrar.Modelo;
             }
+        }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Alquiler confirmado");
         }
     }
 }
